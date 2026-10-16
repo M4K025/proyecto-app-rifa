@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" font-family="Segoe UI,Arial">
+<rect width="1000" height="620" rx="20" fill="#FAF7FF"/>
+<text x="500" y="42" text-anchor="middle" font-size="24" font-weight="800" fill="#6D28D9">E03 · Casos de uso por capas</text>
+<text x="500" y="64" text-anchor="middle" font-size="12" fill="#8B8399">Cada caso indica su capa principal: FRONTEND = lo ve el usuario · API = endpoint · BACK = regla · ORM = guarda</text>
+<g font-size="13">
+<ellipse cx="130" cy="180" rx="80" ry="40" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/><text x="130" y="186" text-anchor="middle" font-weight="800">Cliente</text>
+<ellipse cx="130" cy="330" rx="80" ry="40" fill="#EDE9FE" stroke="#7C5CBF" stroke-width="2"/><text x="130" y="336" text-anchor="middle" font-weight="800">Organizador</text>
+<ellipse cx="130" cy="460" rx="80" ry="40" fill="#FFE4E6" stroke="#F472B6" stroke-width="2"/><text x="130" y="466" text-anchor="middle" font-weight="800">PasarelaPago</text>
+<rect x="300" y="110" width="620" height="70" rx="12" fill="#EDE9FE" stroke="#7C5CBF" stroke-width="2.5"/><text x="320" y="136" font-weight="800">Comprar Boleta [FRONTEND→API→BACK→ORM]</text><text x="320" y="156" font-size="12">Flujo principal · pantallas Tablero+Pagar · POST /api/compras · ServicioCompra · ORM</text>
+<rect x="330" y="195" width="560" height="44" rx="10" fill="#fff" stroke="#CDB4DB" stroke-width="1.5"/><text x="345" y="214">Seleccionar Rifa [FRONTEND] · GET /api/rifas</text><text x="760" y="214" font-size="11" fill="#7C5CBF">&lt;&lt;include&gt;&gt;</text>
+<rect x="330" y="245" width="560" height="44" rx="10" fill="#fff" stroke="#CDB4DB" stroke-width="1.5"/><text x="345" y="264">Seleccionar Boleta [FRONTEND] · GET tablero</text><text x="760" y="264" font-size="11" fill="#7C5CBF">&lt;&lt;include&gt;&gt;</text>
+<rect x="330" y="295" width="560" height="44" rx="10" fill="#FFE4E6" stroke="#F472B6" stroke-width="1.5"/><text x="345" y="314">Realizar Pago [API+BACK] · Pago.aprobar() · ORM pagos</text><text x="760" y="314" font-size="11" fill="#DB2777">&lt;&lt;include&gt;&gt;</text>
+<rect x="330" y="345" width="560" height="44" rx="10" fill="#fff" stroke="#CDB4DB" stroke-width="1.5"/><text x="345" y="364">Generar Comprobante [BACK] · QR · enviar_por_correo</text><text x="760" y="364" font-size="11" fill="#7C5CBF">&lt;&lt;include&gt;&gt;</text>
+<rect x="330" y="395" width="560" height="44" rx="10" fill="#fff" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6 4"/><text x="345" y="414">Cancelar Compra [BACK] · anular() · libera boleto</text><text x="760" y="414" font-size="11" fill="#B45309">&lt;&lt;extend&gt;&gt;</text>
+<rect x="300" y="455" width="300" height="60" rx="10" fill="#EDE9FE" stroke="#7C5CBF" stroke-width="2"/><text x="315" y="478" font-weight="700">Crear Rifa [BACK]</text><text x="315" y="497" font-size="12">POST /api/rifas · genera N boletos</text>
+<rect x="620" y="455" width="300" height="60" rx="10" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/><text x="635" y="478" font-weight="700">Reporte/Sorteo [BACK+ORM]</text><text x="635" y="497" font-size="12">GET /api/reportes · POST /api/sorteos</text>
+</g>
+<text x="500" y="560" text-anchor="middle" font-size="12" fill="#8B8399">Cliente→Comprar · Organizador→Crear/Reporte/Sorteo · Pasarela→Realizar Pago · Archivo E03 para Modelio y revisión</text>
+</svg>

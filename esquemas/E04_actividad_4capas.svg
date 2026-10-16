@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" font-family="Segoe UI,Arial">
+<rect width="1100" height="640" rx="20" fill="#FAF7FF"/>
+<text x="550" y="40" text-anchor="middle" font-size="24" font-weight="800" fill="#6D28D9">E04 · Actividad Comprar Boleta — carriles por capa</text>
+<text x="550" y="62" text-anchor="middle" font-size="12" fill="#8B8399">Implementado en back/servicios/servicio_compra.py · API: Api.post_compras · ORM: RepoCompras/RepoPagos</text>
+<g font-size="12.5">
+<rect x="30" y="85" width="245" height="480" rx="12" fill="#FFF7ED" stroke="#FB923C" stroke-width="2"/><text x="152" y="108" text-anchor="middle" font-weight="800" fill="#9A3412">FRONTEND</text>
+<rect x="290" y="85" width="245" height="480" rx="12" fill="#FFE4E6" stroke="#F472B6" stroke-width="2"/><text x="412" y="108" text-anchor="middle" font-weight="800" fill="#9D174D">API</text>
+<rect x="550" y="85" width="245" height="480" rx="12" fill="#EDE9FE" stroke="#7C5CBF" stroke-width="2.5"/><text x="672" y="108" text-anchor="middle" font-weight="800" fill="#6D28D9">BACK</text>
+<rect x="810" y="85" width="245" height="480" rx="12" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2"/><text x="932" y="108" text-anchor="middle" font-weight="800" fill="#1D4ED8">ORM SQLite</text>
+<g text-anchor="middle">
+<rect x="45" y="125" width="215" height="44" rx="10" fill="#fff" stroke="#FB923C"/><text x="152" y="144">Seleccionar rifa</text><text x="152" y="160" font-size="11">GET /api/rifas</text>
+<rect x="45" y="180" width="215" height="44" rx="10" fill="#fff" stroke="#FB923C"/><text x="152" y="199">Ver tablero</text><text x="152" y="215" font-size="11">disponibles</text>
+<rect x="45" y="235" width="215" height="44" rx="10" fill="#fff" stroke="#FB923C"/><text x="152" y="254">Elegir boleta</text><text x="152" y="270" font-size="11">clic número</text>
+<rect x="305" y="235" width="215" height="44" rx="10" fill="#fff" stroke="#F472B6"/><text x="412" y="254">POST /api/compras</text><text x="412" y="270" font-size="11">ComprarRequest</text>
+<rect x="565" y="300" width="215" height="52" rx="10" fill="#fff" stroke="#7C5CBF" stroke-width="2"/><text x="672" y="319">¿Boleto disponible?</text><text x="672" y="336" font-size="11">No→error→Fin</text>
+<rect x="45" y="300" width="215" height="44" rx="10" fill="#fff" stroke="#FB923C"/><text x="152" y="319">Ingresar pago</text><text x="152" y="335" font-size="11">datos + método</text>
+<rect x="565" y="365" width="215" height="52" rx="10" fill="#fff" stroke="#7C5CBF" stroke-width="2"/><text x="672" y="384">¿Pago exitoso?</text><text x="672" y="401" font-size="11">aprobar()/rechazar()</text>
+<rect x="565" y="430" width="215" height="44" rx="10" fill="#7C5CBF"/><text x="672" y="449" fill="#fff" font-weight="700">confirmar()</text><text x="672" y="464" fill="#fff" font-size="11">vende + abona meta</text>
+<rect x="825" y="430" width="215" height="44" rx="10" fill="#fff" stroke="#60A5FA" stroke-width="2"/><text x="932" y="449">guardar todo</text><text x="932" y="464" font-size="11">compras/pagos/boletos</text>
+<rect x="45" y="490" width="215" height="44" rx="10" fill="#6D28D9"/><text x="152" y="509" fill="#fff" font-weight="700">Ver comprobante</text><text x="152" y="524" fill="#fff" font-size="11">QR + correo → Fin ✓</text>
+</g>
+<line x1="260" y1="257" x2="305" y2="257" stroke="#7C5CBF" stroke-width="2" marker-end="none"/>
+<line x1="520" y1="257" x2="565" y2="325" stroke="#7C5CBF" stroke-width="2"/>
+<line x1="672" y1="417" x2="672" y2="430" stroke="#7C5CBF" stroke-width="2"/>
+<line x1="780" y1="452" x2="825" y2="452" stroke="#1D4ED8" stroke-width="2"/>
+</g>
+<text x="550" y="600" text-anchor="middle" font-size="12" fill="#8B8399">Carriles = capas · No se permite FRONTEND→BACK directo · Todo pasa por API y se guarda en ORM</text>
+</svg>

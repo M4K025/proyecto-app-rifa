@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" font-family="Segoe UI,Arial">
+<rect width="1000" height="640" rx="20" fill="#FAF7FF"/>
+<text x="500" y="44" text-anchor="middle" font-size="26" font-weight="800" fill="#6D28D9">E01 · Arquitectura 4 capas — FRONTEND · API · BACK · ORM</text>
+<text x="500" y="68" text-anchor="middle" font-size="13" fill="#8B8399">Proyecto Rifa · Meta $900.000 · Las flechas son dependencias permitidas</text>
+<g font-size="15">
+<rect x="180" y="100" width="640" height="104" rx="14" fill="#FFF7ED" stroke="#FB923C" stroke-width="2.5"/>
+<text x="205" y="130" font-weight="800" fill="#9A3412">1 · FRONTEND — App móvil / CLI</text>
+<text x="205" y="152" font-size="13" fill="#57534E">src/rifa_app/frontend/ · pantallas, tablero 00–99 · solo llama a la API</text>
+<text x="205" y="172" font-size="13" fill="#57534E">PANTALLAS: Registro · Crear rifa · Ficha · Tablero · Pagar · Mis rifas</text>
+<text x="500" y="222" text-anchor="middle" font-size="20" fill="#7C5CBF">▼ llama</text>
+<rect x="180" y="232" width="640" height="90" rx="14" fill="#FFE4E6" stroke="#F472B6" stroke-width="2.5"/>
+<text x="205" y="262" font-weight="800" fill="#9D174D">2 · API — Contratos REST</text>
+<text x="205" y="284" font-size="13" fill="#57534E">src/rifa_app/api/ · DTOs + Api.post_* · valida y delega, sin reglas</text>
+<text x="205" y="302" font-size="13" fill="#57534E">POST /api/rifas · POST /api/compras · POST /api/sorteos · GET /api/reportes</text>
+<text x="500" y="340" text-anchor="middle" font-size="20" fill="#7C5CBF">▼ delega</text>
+<rect x="180" y="350" width="640" height="110" rx="14" fill="#EDE9FE" stroke="#7C5CBF" stroke-width="3"/>
+<text x="205" y="380" font-weight="800" fill="#6D28D9">3 · BACK — Negocio + Dominio (corazón POO)</text>
+<text x="205" y="402" font-size="13" fill="#4C4356">back/servicios/: Usuario · Rifa · Boleto · Compra · Pago · Sorteo · Reporte</text>
+<text x="205" y="422" font-size="13" fill="#4C4356">back/dominio/: Usuario · Rifa · Boleto · Compra · Pago · Sorteo · Meta · Reporte</text>
+<text x="205" y="442" font-size="13" fill="#4C4356">Reglas: reservar() · confirmar() · aprobar() · realizar_sorteo() · verificar_meta()</text>
+<text x="500" y="478" text-anchor="middle" font-size="20" fill="#7C5CBF">▼ persiste</text>
+<rect x="180" y="488" width="640" height="104" rx="14" fill="#DBEAFE" stroke="#60A5FA" stroke-width="2.5"/>
+<text x="205" y="518" font-weight="800" fill="#1D4ED8">4 · ORM — Mapeo Objeto-Relacional (SQLite)</text>
+<text x="205" y="540" font-size="13" fill="#374151">src/rifa_app/orm/ · Database + RepoUsuarios/Rifas/Boletos/Compras/Pagos/…</text>
+<text x="205" y="560" font-size="13" fill="#374151">Tablas: usuarios · rifas · boletos · compras · pagos · sorteos · metas · reportes</text>
+</g>
+<text x="500" y="622" text-anchor="middle" font-size="12" fill="#8B8399">Regla: FRONTEND→API→BACK→ORM · BACK no escribe SQL · ORM no tiene reglas · Prohibido saltarse capas</text>
+</svg>
