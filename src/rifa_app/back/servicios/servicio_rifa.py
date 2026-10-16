@@ -1,7 +1,7 @@
 from ..dominio import EstadoRifa, Rifa, MetaRecaudacion
 
-
 class ServicioRifa:
+
     def __init__(self, repo_rifas, repo_metas):
         self.rifas = repo_rifas
         self.metas = repo_metas
@@ -14,7 +14,7 @@ class ServicioRifa:
         self.metas.guardar(meta)
         self._precio_default = precio_boleto
         self._cantidad_default = cantidad_boletos
-        return rifa, meta
+        return (rifa, meta)
 
     def listar_activas(self):
         return self.rifas.buscar_por(estado=EstadoRifa.ACTIVA)
@@ -22,6 +22,6 @@ class ServicioRifa:
     def finalizar(self, rifa_id: int):
         r = self.rifas.obtener(rifa_id)
         if not r:
-            raise ValueError("rifa no existe")
+            raise ValueError('rifa no existe')
         r.estado = EstadoRifa.FINALIZADA
         return self.rifas.guardar(r)

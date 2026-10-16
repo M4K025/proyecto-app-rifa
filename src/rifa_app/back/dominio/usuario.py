@@ -1,20 +1,18 @@
 from dataclasses import dataclass
 from .enums import RolUsuario
 
-
 @dataclass
 class Usuario:
-    """Ficha de tu diagrama Usuario, en limpio."""
     id: int
     nombre: str
     correo: str
-    telefono: str = ""
-    documento: str = ""
+    telefono: str = ''
+    documento: str = ''
     rol: RolUsuario = RolUsuario.CLIENTE
 
     def registrar(self) -> None:
-        if "@" not in self.correo:
-            raise ValueError("correo inválido")
+        if '@' not in self.correo:
+            raise ValueError('correo inválido')
 
     def iniciar_sesion(self) -> bool:
         return bool(self.correo)

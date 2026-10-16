@@ -2,7 +2,6 @@ from dataclasses import dataclass
 from datetime import datetime
 from .enums import EstadoBoleto
 
-
 @dataclass
 class Boleto:
     id: int
@@ -16,14 +15,14 @@ class Boleto:
 
     def reservar(self, comprador_id: int) -> None:
         if self.estado != EstadoBoleto.DISPONIBLE:
-            raise ValueError(f"boleto {self.numero} no disponible ({self.estado})")
+            raise ValueError(f'boleto {self.numero} no disponible ({self.estado})')
         self.estado = EstadoBoleto.APARTADO
         self.comprador_id = comprador_id
         self.fecha_apartado = datetime.now()
 
     def marcar_vendido(self) -> None:
         if self.estado not in (EstadoBoleto.APARTADO, EstadoBoleto.PAGADO):
-            raise ValueError("solo un boleto apartado/pagado se puede vender")
+            raise ValueError('solo un boleto apartado/pagado se puede vender')
         self.estado = EstadoBoleto.VENDIDO
 
     def liberar(self) -> None:

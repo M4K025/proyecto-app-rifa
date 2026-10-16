@@ -2,13 +2,12 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from .enums import EstadoPago
 
-
 @dataclass
 class Pago:
     id: int
     compra_id: int
     monto: float
-    referencia: str = ""
+    referencia: str = ''
     estado: EstadoPago = EstadoPago.PENDIENTE
     fecha: datetime = field(default_factory=datetime.now)
 

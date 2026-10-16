@@ -3,10 +3,8 @@ from datetime import datetime
 from .enums import EstadoBoleto, EstadoCompra, MetodoPago
 from .boleto import Boleto
 
-
 @dataclass
 class Compra:
-    """Una compra agrupa 1..N boletos (relación incluye del XMI)."""
     id: int
     usuario_id: int
     boletos: list[Boleto] = field(default_factory=list)
@@ -15,7 +13,7 @@ class Compra:
     fecha: datetime = field(default_factory=datetime.now)
 
     def calcular_total(self) -> float:
-        return sum(b.precio for b in self.boletos)
+        return sum((b.precio for b in self.boletos))
 
     @property
     def total(self) -> float:
@@ -23,7 +21,7 @@ class Compra:
 
     def confirmar(self) -> None:
         if not self.boletos:
-            raise ValueError("compra sin boletos")
+            raise ValueError('compra sin boletos')
         for b in self.boletos:
             b.marcar_vendido()
         self.estado = EstadoCompra.CONFIRMADA
