@@ -28,10 +28,10 @@ def main() -> None:
     s_compra = ServicioCompra(r_compras, r_pagos, r_boletos, r_rifas, r_metas, r_comprob)
     s_reporte = ServicioReporte(r_reportes, r_boletos)
 
-    # Flujo HU: crear rifa $900.000
-    rifa, meta = s_rifa.crear_rifa("Rifa moto", precio_boleto=90_000, cantidad_boletos=10,
-                                   descripcion="Moto + papeles", objetivo=900_000.0)
-    s_boleto.generar_boletos(rifa.id, 10, 90_000)
+    # Flujo HU: crear rifa $2.000.000
+    rifa, meta = s_rifa.crear_rifa("Rifa 2.000.000", precio_boleto=50_000, cantidad_boletos=40,
+                                   descripcion="Premio en efectivo", objetivo=2_000_000.0)
+    s_boleto.generar_boletos(rifa.id, 40, 50_000)
     print(f"Rifa {rifa.id} '{rifa.titulo}' objetivo={rifa.objetivo} disponibles={len(s_boleto.disponibles(rifa.id))}")
 
     # FRONTEND: el usuario elige el boleto #5 y paga -> va por la API

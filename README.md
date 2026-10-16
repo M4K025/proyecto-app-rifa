@@ -1,6 +1,6 @@
 # PRODUCTO FINAL — Rifa App (POO 4 capas: FRONTEND · API · BACK · ORM)
 
-Meta del negocio: **$900.000**.
+Meta del negocio: **$2.000.000**.
 
 ## Qué enviar a tus compañeros (4 esquemas + código)
 

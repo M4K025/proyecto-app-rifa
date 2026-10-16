@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" font-family="Segoe UI,Arial">
 <rect width="1000" height="640" rx="20" fill="#FAF7FF"/>
 <text x="500" y="44" text-anchor="middle" font-size="26" font-weight="800" fill="#6D28D9">E01 · Arquitectura 4 capas — FRONTEND · API · BACK · ORM</text>
-<text x="500" y="68" text-anchor="middle" font-size="13" fill="#8B8399">Proyecto Rifa · Meta $900.000 · Las flechas son dependencias permitidas</text>
+<text x="500" y="68" text-anchor="middle" font-size="13" fill="#8B8399">Proyecto Rifa · Meta $2.000.000 · Las flechas son dependencias permitidas</text>
 <g font-size="15">
 <rect x="180" y="100" width="640" height="104" rx="14" fill="#FFF7ED" stroke="#FB923C" stroke-width="2.5"/>
 <text x="205" y="130" font-weight="800" fill="#9A3412">1 · FRONTEND — App móvil / CLI</text>

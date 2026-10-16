@@ -6,7 +6,7 @@ class ServicioReporte:
         self.reportes = repo_reportes
         self.boletos = repo_boletos
 
-    def generar(self, rifa_id: int, tipo: TipoReporte = TipoReporte.RECAUDACION, recaudado: float = 0, objetivo: float = 900_000) -> Reporte:
+    def generar(self, rifa_id: int, tipo: TipoReporte = TipoReporte.RECAUDACION, recaudado: float = 0, objetivo: float = 2_000_000) -> Reporte:
         bol = self.boletos.buscar_por(rifa_id=rifa_id)
         disp = sum(1 for b in bol if b.estado == EstadoBoleto.DISPONIBLE)
         vend = sum(1 for b in bol if b.estado in (EstadoBoleto.VENDIDO, EstadoBoleto.PAGADO))

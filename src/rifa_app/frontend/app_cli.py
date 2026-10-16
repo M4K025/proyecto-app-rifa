@@ -15,7 +15,7 @@ def main(api):
         op = _input("Opción", "0")
         try:
             if op == "1":
-                t = _input("Título", "Rifa moto"); p = float(_input("Precio", "90000")); c = int(_input("Cantidad", "10"))
+                t = _input("Título", "Rifa 2.000.000"); p = float(_input("Precio", "50000")); c = int(_input("Cantidad", "10"))
                 rifa, meta = api.post_rifas(CrearRifaRequest(t, p, c))
                 print(f"Rifa {rifa.id} creada, {c} boletos de ${p:,.0f}. Meta ${meta.monto_meta:,.0f}")
             elif op == "2":
@@ -42,7 +42,7 @@ def main(api):
                 rid = int(_input("Rifa id", "1"))
                 rifas = [r for r in api.get_rifas() if r.id == rid] or api.rifa.rifas.listar()
                 r = next((x for x in rifas if x.id == rid), None)
-                rep = api.get_reporte(rid, recaudado=r.monto_recaudado if r else 0, objetivo=r.objetivo if r else 900000)
+                rep = api.get_reporte(rid, recaudado=r.monto_recaudado if r else 0, objetivo=r.objetivo if r else 2000000)
                 print(rep.exportar())
             elif op == "0":
                 break

@@ -43,6 +43,6 @@ class Api:
         return self.sorteo.realizar(rifa_id)
 
     # GET /api/reportes
-    def get_reporte(self, rifa_id: int, tipo="RECAUDACION", recaudado=0, objetivo=900_000):
+    def get_reporte(self, rifa_id: int, tipo="RECAUDACION", recaudado=0, objetivo=2_000_000):
         from ..back.dominio.enums import TipoReporte
         return self.rep.generar(rifa_id, TipoReporte(tipo), recaudado, objetivo)

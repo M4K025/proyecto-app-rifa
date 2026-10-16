@@ -8,7 +8,7 @@ class Rifa:
     id: int
     titulo: str
     descripcion: str = ""
-    objetivo: float = 900_000.0
+    objetivo: float = 2_000_000.0
     monto_recaudado: float = 0.0
     fecha_inicio: date | None = None
     fecha_fin: date | None = None

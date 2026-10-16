@@ -76,7 +76,7 @@
   <h1>🎟️ Proyecto Rifa — App móvil</h1>
   <p class="sub">Dossier unificado para revisión del equipo · del cuaderno al código</p>
   <div>
-    <span class="badge meta">Meta del negocio: $900.000</span>
+    <span class="badge meta">Meta del negocio: $2.000.000</span>
     <span class="badge">POO · 4 capas</span>
     <span class="badge">Estado: Para revisión</span>
   </div>
@@ -126,7 +126,7 @@
   <p class="desc">Morado = núcleo · Azul = soporte · Rosa = comprobantes/reportes · Lila = enums. Sin duplicados.</p>
   <div class="grid-clases">
     <div class="clase principal"><header>Usuario</header><div class="body"><b>Atributos:</b><ul><li>id, nombre, correo</li><li>teléfono, documento</li><li>rol: ADMIN/ORGANIZADOR/VENDEDOR/CLIENTE</li></ul><b>Métodos:</b><ul><li>registrar(), iniciar_sesion()</li></ul></div></div>
-    <div class="clase principal"><header>Rifa — objetivo $900.000</header><div class="body"><b>Atributos:</b><ul><li>id, título, descripción</li><li>objetivo, monto_recaudado</li><li>fechas, estado, premio</li></ul><b>Métodos:</b><ul><li>crear(), abonar(), verificar_meta()</li></ul></div></div>
+    <div class="clase principal"><header>Rifa — objetivo $2.000.000</header><div class="body"><b>Atributos:</b><ul><li>id, título, descripción</li><li>objetivo, monto_recaudado</li><li>fechas, estado, premio</li></ul><b>Métodos:</b><ul><li>crear(), abonar(), verificar_meta()</li></ul></div></div>
     <div class="clase principal"><header>Boleto</header><div class="body"><b>Atributos:</b><ul><li>id, número, precio, rifa_id</li><li>estado: DISPONIBLE/APARTADO/PAGADO/VENDIDO</li><li>comprador_id, fecha_apartado</li></ul><b>Métodos:</b><ul><li>reservar(), marcar_vendido(), liberar()</li></ul></div></div>
     <div class="clase principal"><header>Compra (1 → 1..* Boleto)</header><div class="body"><b>Atributos:</b><ul><li>id, usuario_id, boletos[]</li><li>total (calculado), método, estado</li></ul><b>Métodos:</b><ul><li>calcular_total(), confirmar(), anular()</li></ul></div></div>
     <div class="clase soporte"><header>Pago</header><div class="body"><ul><li>compra_id, monto, referencia</li><li>estado: PENDIENTE/APROBADO/RECHAZADO</li><li>aprobar(), rechazar()</li></ul></div></div>

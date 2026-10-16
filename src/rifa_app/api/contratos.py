@@ -10,7 +10,7 @@ ENDPOINTS = [
     ("POST", "/api/compras", "Comprar (apartar+ pagar + comprobante)"),
     ("POST", "/api/pagos/{id}/aprobar", "Aprobar pago (organizador)"),
     ("POST", "/api/sorteos", "Realizar sorteo"),
-    ("GET", "/api/reportes?rifa={id}&tipo=RECAUDACION", "Reporte recaudado vs $900.000"),
+    ("GET", "/api/reportes?rifa={id}&tipo=RECAUDACION", "Reporte recaudado vs $2.000.000"),
 ]
 
 
@@ -19,7 +19,7 @@ class CrearRifaRequest:
     titulo: str
     precio_boleto: float
     cantidad_boletos: int
-    objetivo: float = 900_000.0
+    objetivo: float = 2_000_000.0
 
 
 @dataclass

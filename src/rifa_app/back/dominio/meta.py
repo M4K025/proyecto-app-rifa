@@ -6,7 +6,7 @@ class MetaRecaudacion:
     """Tu cuadro MetaRecaudación separado de Rifa."""
     id: int
     rifa_id: int
-    monto_meta: float = 900_000.0
+    monto_meta: float = 2_000_000.0
     monto_actual: float = 0.0
 
     def actualizar_monto(self, valor: float) -> None:
